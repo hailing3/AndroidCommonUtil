@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AndroidCommonUtil</string>
+    <string name="activity_main">自定义各种工具集合</string>
+    <string name="activity_na_h5">NA与H5界面交互，调用方法</string>
+
+</resources>
