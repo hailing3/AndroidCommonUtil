@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <script type="text/javascript">window.addText = function(addString) {
+            // alert("恭喜：" +addString);text = document.getElementById('tInput');text.value = text.value +
+            addString};window.callNaMethod = function(a, b){naObject.callAndroidMethod(a,
+            document.getElementById('tInput').value, b)}
+        </script>
+    </head>
+    <body>
+        <input id="tInput" type="text" value="hello:" />
+        <br />
+        <input name="" id="" onclick="addText('a')" type="button" value="文案变化按钮" />
+        <br />
+        <input onclick="callNaMethod(10, false)" type="button" value="调用NA方法" />
+    </body>
+</html>
