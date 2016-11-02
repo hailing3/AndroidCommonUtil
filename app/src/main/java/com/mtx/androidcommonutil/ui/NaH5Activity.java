@@ -1,7 +1,6 @@
 package com.mtx.androidcommonutil.ui;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,7 +12,7 @@ import com.mtx.androidcommonutil.ui.widget.CommonWebView;
  * <p/>
  * Android NA与H5交互样例
  */
-public class NaH5Activity extends AppCompatActivity implements View.OnClickListener {
+public class NaH5Activity extends BaseActivity implements View.OnClickListener {
 
     private Button mBtn;
     private CommonWebView mWebView;

@@ -10,6 +10,9 @@ import android.widget.Toast;
  */
 public class ToastUtil {
 
+    private ToastUtil() {
+    }
+
     private static Toast sToast;
 
     public static void show(Context context, String string) {

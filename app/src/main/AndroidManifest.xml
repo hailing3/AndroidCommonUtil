@@ -18,10 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.NaH5Activity"
             android:label="@string/activity_na_h5" />
+        <activity
+            android:name=".ui.TestActivity"
+            android:label="@string/activity_test" />
     </application>
 
 </manifest>
