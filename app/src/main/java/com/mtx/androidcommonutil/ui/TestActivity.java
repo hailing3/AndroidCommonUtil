@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.mtx.androidcommonutil.R;
+import com.mtx.androidcommonutil.util.Base64;
 import com.mtx.androidcommonutil.util.LogUtil;
 import com.mtx.androidcommonutil.util.Pref;
 import com.mtx.androidcommonutil.util.PreferenceUtil;
@@ -30,7 +31,13 @@ public class TestActivity extends BaseActivity {
     }
 
     public void saveClick(View view) {
-        PreferenceUtil.setString(TestActivity.this, Pref.KEY_TEST, mEdit.getText().toString().trim());
+        String source = mEdit.getText().toString().trim();
+//        PreferenceUtil.setString(TestActivity.this, Pref.KEY_TEST, mEdit.getText().toString().trim());
+        String encode = Base64.encode(source);
+        LogUtil.i(TAG, "encode="+ encode);
+        String decode = Base64.decode(encode);
+        LogUtil.i(TAG, "decode="+ decode);
+
     }
 
     public void readClick(View view) {
