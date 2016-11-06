@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.util;
+package com.mtx.androidcommonutil.util.pref;
 
 /**
  * 存储PreferenceUtil中的所有键值

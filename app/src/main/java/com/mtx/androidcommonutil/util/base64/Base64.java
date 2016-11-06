@@ -1,5 +1,5 @@
 
-package com.mtx.androidcommonutil.util;
+package com.mtx.androidcommonutil.util.base64;
 
 
 import java.io.BufferedInputStream;
@@ -14,6 +14,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
+/**
+ * 加密后的内容比较短，只是两个相同字符加密后，差别有规律，感觉容易被破解
+ */
 public class Base64 {
 
     private static final int END_OF_INPUT = -1;

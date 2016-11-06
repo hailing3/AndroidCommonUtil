@@ -5,10 +5,13 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.mtx.androidcommonutil.R;
-import com.mtx.androidcommonutil.util.Base64;
 import com.mtx.androidcommonutil.util.LogUtil;
-import com.mtx.androidcommonutil.util.Pref;
-import com.mtx.androidcommonutil.util.PreferenceUtil;
+import com.mtx.androidcommonutil.util.MD5Util;
+import com.mtx.androidcommonutil.util.base64.Base64;
+import com.mtx.androidcommonutil.util.pref.Pref;
+import com.mtx.androidcommonutil.util.pref.PreferenceUtil;
+
+import java.io.IOException;
 
 public class TestActivity extends BaseActivity {
 
@@ -30,13 +33,16 @@ public class TestActivity extends BaseActivity {
         LogUtil.d(TAG, "test");
     }
 
-    public void saveClick(View view) {
+    public void saveClick(View view) throws IOException {
         String source = mEdit.getText().toString().trim();
-//        PreferenceUtil.setString(TestActivity.this, Pref.KEY_TEST, mEdit.getText().toString().trim());
         String encode = Base64.encode(source);
-        LogUtil.i(TAG, "encode="+ encode);
+        LogUtil.i(TAG, "Base64 encode=" + encode);
         String decode = Base64.decode(encode);
-        LogUtil.i(TAG, "decode="+ decode);
+        LogUtil.i(TAG, "Base64 decode=" + decode);
+
+        String encodeMd5 = MD5Util.RSAEncrypt(source);
+        LogUtil.i(TAG, "Md5 encode=" + encodeMd5);
+        LogUtil.i(TAG, "Md5 decode=" + MD5Util.RSADecrypt(encodeMd5));
 
     }
 

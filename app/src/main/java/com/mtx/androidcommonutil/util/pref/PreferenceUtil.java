@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.util;
+package com.mtx.androidcommonutil.util.pref;
 
 import android.content.Context;
 import android.content.SharedPreferences;

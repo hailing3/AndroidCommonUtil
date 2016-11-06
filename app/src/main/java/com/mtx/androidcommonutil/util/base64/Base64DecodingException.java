@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.util;
+package com.mtx.androidcommonutil.util.base64;
 
 /*
  * Base64 decoding exception.
