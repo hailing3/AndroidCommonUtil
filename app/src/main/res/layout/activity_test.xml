@@ -21,14 +21,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="saveClick"
-            android:text="存" />
+            android:onClick="btnClickLeft"
+            android:text="显示状态栏" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="readClick"
-            android:text="取" />
+            android:onClick="btnClickRight"
+            android:text="隐藏状态栏" />
     </LinearLayout>
 </LinearLayout>

@@ -6,12 +6,7 @@ import android.widget.EditText;
 
 import com.mtx.androidcommonutil.R;
 import com.mtx.androidcommonutil.util.LogUtil;
-import com.mtx.androidcommonutil.util.MD5Util;
-import com.mtx.androidcommonutil.util.base64.Base64;
-import com.mtx.androidcommonutil.util.pref.Pref;
-import com.mtx.androidcommonutil.util.pref.PreferenceUtil;
-
-import java.io.IOException;
+import com.mtx.androidcommonutil.util.StatusBarUtil;
 
 public class TestActivity extends BaseActivity {
 
@@ -29,26 +24,17 @@ public class TestActivity extends BaseActivity {
         mEdit = (EditText) findViewById(R.id.edit);
     }
 
-    public void click(View view) {
-        LogUtil.d(TAG, "test");
-    }
-
-    public void saveClick(View view) throws IOException {
-        String source = mEdit.getText().toString().trim();
-        String encode = Base64.encode(source);
-        LogUtil.i(TAG, "Base64 encode=" + encode);
-        String decode = Base64.decode(encode);
-        LogUtil.i(TAG, "Base64 decode=" + decode);
-
-        String encodeMd5 = MD5Util.RSAEncrypt(source);
-        LogUtil.i(TAG, "Md5 encode=" + encodeMd5);
-        LogUtil.i(TAG, "Md5 decode=" + MD5Util.RSADecrypt(encodeMd5));
+    public void btnClickLeft(View view) {
+        StatusBarUtil.setStatusBarShowOrHidden(true, getWindow());
+//        LogUtil.i(TAG, "状态栏高度：" + StatusBarUtil.getStatusBarHeight(TestActivity.this));
+        LogUtil.i(TAG, "状态栏是否显示：" + StatusBarUtil.isStatusBarShow(getWindow()));
 
     }
 
-    public void readClick(View view) {
-        String string = PreferenceUtil.getString(TestActivity.this, Pref.KEY_TEST, "null");
-        LogUtil.d(TAG, "readClick..." + string);
+    public void btnClickRight(View view) {
+        StatusBarUtil.setStatusBarShowOrHidden(false, getWindow());
+        LogUtil.i(TAG, "状态栏是否显示：" + StatusBarUtil.isStatusBarShow(getWindow()));
     }
+
 
 }
