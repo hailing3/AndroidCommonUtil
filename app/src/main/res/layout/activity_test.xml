@@ -12,6 +12,15 @@
         android:hint="test"
         android:text="helloworld" />
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9.3dp"
+        android:paddingBottom="20dip"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,14 +30,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="saveClick"
-            android:text="存" />
+            android:onClick="btnClickLeft"
+            android:text="显示状态栏" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="readClick"
-            android:text="取" />
+            android:onClick="btnClickRight"
+            android:text="隐藏状态栏" />
     </LinearLayout>
 </LinearLayout>

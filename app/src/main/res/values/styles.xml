@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ThemeFitsSystemWindow" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
 </resources>

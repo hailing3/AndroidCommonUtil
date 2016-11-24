@@ -3,52 +3,64 @@ package com.mtx.androidcommonutil.ui;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SeekBar;
 
 import com.mtx.androidcommonutil.R;
 import com.mtx.androidcommonutil.util.LogUtil;
-import com.mtx.androidcommonutil.util.MD5Util;
-import com.mtx.androidcommonutil.util.base64.Base64;
-import com.mtx.androidcommonutil.util.pref.Pref;
-import com.mtx.androidcommonutil.util.pref.PreferenceUtil;
+import com.mtx.androidcommonutil.util.statusbar.StatusBarUtil;
 
-import java.io.IOException;
-
-public class TestActivity extends BaseActivity {
+public class TestActivity extends BaseActivity implements SeekBar.OnSeekBarChangeListener {
 
     private static final String TAG = "TestActivity";
     private EditText mEdit;
+    private SeekBar mSeekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // 使在全屏与非全屏之切换时，屏幕内容不会发生抖动
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         initView();
+
+        StatusBarUtil.setStatusBarShowOrHidden(true, getWindow());
     }
 
     private void initView() {
         mEdit = (EditText) findViewById(R.id.edit);
-    }
-
-    public void click(View view) {
-        LogUtil.d(TAG, "test");
-    }
-
-    public void saveClick(View view) throws IOException {
-        String source = mEdit.getText().toString().trim();
-        String encode = Base64.encode(source);
-        LogUtil.i(TAG, "Base64 encode=" + encode);
-        String decode = Base64.decode(encode);
-        LogUtil.i(TAG, "Base64 decode=" + decode);
-
-        String encodeMd5 = MD5Util.RSAEncrypt(source);
-        LogUtil.i(TAG, "Md5 encode=" + encodeMd5);
-        LogUtil.i(TAG, "Md5 decode=" + MD5Util.RSADecrypt(encodeMd5));
+        mSeekBar = (SeekBar) findViewById(R.id.seekBar);
+        mSeekBar.setOnSeekBarChangeListener(this);
 
     }
 
-    public void readClick(View view) {
-        String string = PreferenceUtil.getString(TestActivity.this, Pref.KEY_TEST, "null");
-        LogUtil.d(TAG, "readClick..." + string);
+    public void btnClickLeft(View view) {
+        StatusBarUtil.setStatusBarShowOrHidden(true, getWindow());
+
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN, WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+//        getWindow().getDecorView().setSystemUiVisibility(View.FLAG_FORCE_NOT_FULLSCREEN);
+
     }
 
+    public void btnClickRight(View view) {
+        StatusBarUtil.setStatusBarShowOrHidden(false, getWindow());
+
+//        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_SHOW_FULLSCREEN);
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        LogUtil.d(TAG, "onProgressChanged " + progress);
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        LogUtil.d(TAG, "onStartTrackingTouch " + seekBar.getProgress());
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        LogUtil.d(TAG, "onStopTrackingTouch " + seekBar.getProgress());
+    }
 }

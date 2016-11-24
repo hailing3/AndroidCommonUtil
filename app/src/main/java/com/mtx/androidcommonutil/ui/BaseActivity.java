@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
  * 所有Activity的基类
  * Created by lishaoming on 2016/11/1.
  */
-
 public class BaseActivity extends AppCompatActivity {
 
     @Override

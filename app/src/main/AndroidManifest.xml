@@ -21,6 +21,12 @@
         <activity
             android:name=".ui.NaH5Activity"
             android:label="@string/activity_na_h5" />
+
+        <activity
+            android:name=".ui.CommonScrollActivity"
+            android:label="@string/activity_common_scroll"
+            android:theme="@style/ThemeFitsSystemWindow" />
+
         <activity
             android:name=".ui.TestActivity"
             android:label="@string/activity_test" />
