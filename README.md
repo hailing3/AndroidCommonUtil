@@ -1,2 +1,4 @@
 # AndroidCommonUtil
 自定义Android工具类集合
+（1）NA与H5页面互相调用方法
+（2）AppLayout的使用：一个view跟随另一个view的移动，自动移动，实现效果为webview垂直滚动，titleBar和bottomBar也自动收起展开，并且伴随状态栏的收起展开
