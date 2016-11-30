@@ -32,16 +32,8 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, NaH5Activity.class));
     }
 
-    public void goCommonScrollActivity(View view) {
-        startActivity(new Intent(MainActivity.this, CommonScrollActivity.class));
-    }
-
     public void goTestActivity(View view) {
         startActivity(new Intent(MainActivity.this, TestActivity.class));
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
 }

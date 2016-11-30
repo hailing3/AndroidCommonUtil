@@ -14,11 +14,7 @@
             android:onClick="goNaH5Activity"
             android:text="NA与H5界面交互，调用方法" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="goCommonScrollActivity"
-            android:text="@string/activity_common_scroll" />
+
 
         <Button
             android:layout_width="match_parent"

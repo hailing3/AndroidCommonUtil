@@ -27,11 +27,11 @@ public class StatusBarUtil {
         android.view.WindowManager.LayoutParams params = window.getAttributes();
         if (isShow) {
             params.flags &= (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+//            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
             window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         } else {
             params.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
-            window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+//            window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
             window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
         window.setAttributes(params);
