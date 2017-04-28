@@ -18,7 +18,6 @@ import java.io.UnsupportedEncodingException;
  * 加密后的内容比较短，只是两个相同字符加密后，差别有规律，感觉容易被破解
  */
 public class Base64 {
-
     private static final int END_OF_INPUT = -1;
     private static final int NON_BASE_64 = -1;
     private static final int NON_BASE_64_WHITESPACE = -2;
@@ -351,7 +350,8 @@ public class Base64 {
      * in the input.
      *
      * @param string The data to decode.
-     * @param encIn  Character encoding to use when converting input to bytes (should not matter because Base64 data is designed to survive most character encodings)
+     * @param encIn  Character encoding to use when converting input to bytes (should not matter
+     *               because Base64 data is designed to survive most character encodings)
      * @param encOut Character encoding to use when converting decoded bytes to output.
      * @return A decoded String.
      * @throws UnsupportedEncodingException if the character encoding specified is not supported.
@@ -397,7 +397,8 @@ public class Base64 {
      * in the input.
      *
      * @param string The data to decode.
-     * @param encIn  Character encoding to use when converting input to bytes (should not matter because Base64 data is designed to survive most character encodings)
+     * @param encIn  Character encoding to use when converting input to bytes (should not matter
+     *               because Base64 data is designed to survive most character encodings)
      * @param encOut Character encoding to use when converting decoded bytes to output.
      * @return A decoded String.
      * @throws UnsupportedEncodingException if the character encoding specified is not supported.
@@ -600,7 +601,8 @@ public class Base64 {
      * @param fIn             File to be decoded (will be overwritten).
      * @param throwExceptions Whether to throw exceptions when unexpected data is encountered.
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is
+     *                                 specified.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(File fIn, boolean throwExceptions) throws IOException {
@@ -633,7 +635,8 @@ public class Base64 {
      * @param fOut            File to which the results should be written (may be the same as fIn).
      * @param throwExceptions Whether to throw exceptions when unexpected data is encountered.
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is
+     *                                 specified.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(File fIn, File fOut, boolean throwExceptions) throws IOException {
@@ -678,9 +681,11 @@ public class Base64 {
      *
      * @param in              Stream from which bytes are read.
      * @param throwExceptions Throw an exception if an unexpected character is encountered.
-     * @return the next Base64 character from the stream or -1 if there are no more Base64 characters on the stream.
+     * @return the next Base64 character from the stream or -1 if there are no more Base64
+     * characters on the stream.
      * @throws IOException             if an IO Error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is
+     *                                 specified.
      * @since ostermillerutils 1.00.00
      */
     private static final int readBase64(InputStream in, boolean throwExceptions) throws IOException {
@@ -776,7 +781,8 @@ public class Base64 {
      * @param out             Stream to which to write decoded data.
      * @param throwExceptions Whether to throw exceptions when unexpected data is encountered.
      * @throws IOException             if an IO error occurs.
-     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is specified.
+     * @throws Base64DecodingException if unexpected data is encountered when throwExceptions is
+     *                                 specified.
      * @since ostermillerutils 1.00.00
      */
     public static void decode(InputStream in, OutputStream out, boolean throwExceptions) throws IOException {

@@ -1,10 +1,10 @@
 package com.mtx.androidcommonutil.ui;
 
+import com.mtx.androidcommonutil.R;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-import com.mtx.androidcommonutil.R;
 
 /**
  * 主页面
@@ -18,10 +18,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         initView();
-
-        // TEST
-//        startActivity(new Intent(MainActivity.this, TestActivity.class));
-//        startActivity(new Intent(MainActivity.this, CommonScrollActivity.class));
     }
 
     private void initView() {
