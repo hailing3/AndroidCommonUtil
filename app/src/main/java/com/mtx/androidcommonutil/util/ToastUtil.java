@@ -9,31 +9,21 @@ import android.widget.Toast;
  * Created by lishaoming on 16/10/30.
  */
 public class ToastUtil {
-
     private ToastUtil() {
     }
 
     private static Toast sToast;
 
     public static void show(Context context, String string) {
-        if (context == null || TextUtils.isEmpty(string)) {
-            return;
-        }
-        if (sToast != null) {
-            sToast.cancel();
-        }
+        if (context == null || TextUtils.isEmpty(string)) return;
+        if (sToast != null) sToast.cancel();
         sToast = Toast.makeText(context, string, Toast.LENGTH_SHORT);
         sToast.show();
     }
 
     public static void show(Context context, int stringId) {
-        if (context == null) {
-            return;
-        }
-
-        if (sToast != null) {
-            sToast.cancel();
-        }
+        if (context == null) return;
+        if (sToast != null) sToast.cancel();
         sToast = Toast.makeText(context, stringId, Toast.LENGTH_SHORT);
         sToast.show();
     }

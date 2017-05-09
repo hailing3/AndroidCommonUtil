@@ -6,9 +6,7 @@ import android.util.Log;
  * 自定义的Log工具，由DEBUG控制是否打印log信息
  * Created by lishaoming on 2016/11/1.
  */
-
 public class LogUtil {
-
     public static final boolean DEBUG = true;
 
     private LogUtil() {

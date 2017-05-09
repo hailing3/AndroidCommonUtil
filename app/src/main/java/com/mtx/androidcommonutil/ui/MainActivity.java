@@ -18,6 +18,8 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         initView();
+
+        startActivity(new Intent(MainActivity.this, TestActivity.class));
     }
 
     private void initView() {
