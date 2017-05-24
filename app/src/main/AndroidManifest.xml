@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mtx.androidcommonutil">
 
+    <!--摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--存储权限                    SD卡读写权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -21,7 +26,9 @@
         <activity
             android:name=".ui.NaH5Activity"
             android:label="@string/activity_na_h5" />
-
+        <activity
+            android:name=".ui.CodeActivity"
+            android:label="@string/activity_code" />
         <activity
             android:name=".ui.TestActivity"
             android:label="@string/activity_test" />

@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, TestActivity.class));
+//        startActivity(new Intent(MainActivity.this, TestActivity.class));
     }
 
     private void initView() {
@@ -28,6 +28,10 @@ public class MainActivity extends BaseActivity {
 
     public void goNaH5Activity(View view) {
         startActivity(new Intent(MainActivity.this, NaH5Activity.class));
+    }
+
+    public void goCodeActivity(View view) {
+        startActivity(new Intent(MainActivity.this, CodeActivity.class));
     }
 
     public void goTestActivity(View view) {
