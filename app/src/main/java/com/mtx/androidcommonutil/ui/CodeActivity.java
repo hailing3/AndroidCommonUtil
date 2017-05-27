@@ -1,5 +1,10 @@
 package com.mtx.androidcommonutil.ui;
 
+import com.mtx.androidcommonutil.R;
+import com.mtx.androidcommonutil.util.ToastUtil;
+import com.uuzuche.lib_zxing.activity.CaptureActivity;
+import com.uuzuche.lib_zxing.activity.CodeUtils;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,12 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mtx.androidcommonutil.R;
-import com.mtx.androidcommonutil.util.ToastUtil;
-import com.uuzuche.lib_zxing.activity.CaptureActivity;
-import com.uuzuche.lib_zxing.activity.CodeUtils;
-
 /**
+ * https://github.com/yipianfengye/android-zxingLibrary
  * 二维码
  */
 public class CodeActivity extends BaseActivity {
@@ -47,6 +48,9 @@ public class CodeActivity extends BaseActivity {
         }
     }
 
+    /**
+     * 跳转到扫描二维码界面：注意必须手动打开相机权限，否则黑屏
+     */
     public void scanCode(View v) {
         Intent intent = new Intent(CodeActivity.this, CaptureActivity.class);
         startActivityForResult(intent, REQUEST_CODE);
