@@ -23,6 +23,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="goHTMLActivity"
+            android:text="@string/activity_html" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:onClick="goTestActivity"
             android:text="TEST" />

@@ -3,6 +3,7 @@
     <string name="activity_main">Android工具</string>
     <string name="activity_na_h5">NA与H5界面交互，调用方法</string>
     <string name="activity_code">二维码</string>
+    <string name="activity_html">HTML TextView</string>
     <string name="activity_common_scroll">WebView滚动，上下面板同步滑动</string>
     <string name="activity_test">测试界面</string>
 
