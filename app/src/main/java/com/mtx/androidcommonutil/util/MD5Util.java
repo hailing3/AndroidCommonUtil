@@ -7,6 +7,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密工具类
  * 加密后的内容都很复杂，但是随着原被加密内容的增长，加密后字符串急剧增长
+ * TODO 加解密貌似失败？解不出之前的信息
  * Created by lishaoming on 16/2/27.
  */
 public class MD5Util {

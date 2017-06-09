@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-//        startActivity(new Intent(MainActivity.this, TextViewActivity.class));
+        startActivity(new Intent(MainActivity.this, CodeActivity.class));
     }
 
     private void initView() {
@@ -36,6 +36,10 @@ public class MainActivity extends BaseActivity {
 
     public void goHTMLActivity(View view) {
         startActivity(new Intent(MainActivity.this, TextViewActivity.class));
+    }
+
+    public void goFragmentActivity(View view) {
+        startActivity(new Intent(MainActivity.this, FragmentActivity.class));
     }
 
     public void goTestActivity(View view) {

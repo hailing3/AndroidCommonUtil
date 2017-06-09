@@ -3,17 +3,13 @@ package com.mtx.androidcommonutil.ui;
 import com.mtx.androidcommonutil.R;
 import com.mtx.androidcommonutil.util.ToastUtil;
 
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 public class TestActivity extends BaseActivity {
     private static final String TAG = "TestActivity";
+    private TextView mTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +20,12 @@ public class TestActivity extends BaseActivity {
     }
 
     private void initView() {
-
+        mTv = (TextView) findViewById(R.id.tv);
+        String string = getString(R.string.place_holder_rmb);
+        mTv.setText(String.format(string, "100元", "50美元"));
     }
 
-    public void testClick(View view){
+    public void testClick(View view) {
         ToastUtil.show(TestActivity.this, "hiuhuijo");
     }
 }

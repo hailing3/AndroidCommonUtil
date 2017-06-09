@@ -10,4 +10,10 @@
             android:src="@drawable/ic_alipay_fukuan"
             android:layout_height="100dp"/>
 
+    <TextView
+            android:id="@+id/tv"
+            android:text="Hello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 </LinearLayout>
