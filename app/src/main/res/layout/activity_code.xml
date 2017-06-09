@@ -20,8 +20,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="getCode"
+            android:onClick="getQrCode"
             android:text="生成二维码" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getBarCode"
+            android:text="生成条形码" />
 
     </LinearLayout>
 

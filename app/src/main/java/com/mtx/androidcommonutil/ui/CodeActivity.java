@@ -1,6 +1,9 @@
 package com.mtx.androidcommonutil.ui;
 
+import com.google.zxing.WriterException;
+
 import com.mtx.androidcommonutil.R;
+import com.mtx.androidcommonutil.util.EncodingHandlerUtil;
 import com.mtx.androidcommonutil.util.ToastUtil;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
@@ -38,7 +41,10 @@ public class CodeActivity extends BaseActivity {
         mTvSessage = (TextView) findViewById(R.id.tv_message);
     }
 
-    public void getCode(View v) {
+    /**
+     * 生成二维码
+     */
+    public void getQrCode(View v) {
         String message = mEdit.getText().toString().trim();
         if (TextUtils.isEmpty(message)) {
             ToastUtil.show(CodeActivity.this, "input empty");
@@ -73,5 +79,24 @@ public class CodeActivity extends BaseActivity {
                 }
             }
         }
+    }
+
+    /**
+     * 生成条形码
+     */
+    public void getBarCode(View view) {
+        String message = mEdit.getText().toString().trim();
+        if (TextUtils.isEmpty(message)) {
+            ToastUtil.show(CodeActivity.this, "input empty");
+        } else {
+            Bitmap mBitmap = null;
+            try {
+                mBitmap = EncodingHandlerUtil.createBarCode(message);
+                mIv.setImageBitmap(mBitmap);
+            } catch (WriterException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }
