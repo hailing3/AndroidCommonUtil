@@ -4,15 +4,10 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.mtx.androidcommonutil.ui.widget.FilterImageView
-            android:layout_width="100dp"
-            android:onClick="testClick"
-            android:src="@drawable/ic_alipay_fukuan"
-            android:layout_height="100dp"/>
-
     <TextView
             android:id="@+id/tv"
-            android:text="Hello"
+            android:hint="Hello"
+            android:textColorHint="#ff0000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
