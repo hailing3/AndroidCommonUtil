@@ -46,4 +46,9 @@ public class FragmentActivity extends BaseActivity {
         }
     };
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mHandler.removeCallbacksAndMessages(null);
+    }
 }

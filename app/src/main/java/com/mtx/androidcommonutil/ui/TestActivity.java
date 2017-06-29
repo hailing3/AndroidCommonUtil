@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 public class TestActivity extends BaseActivity {
     private static final String TAG = "TestActivity";
-
     private TextView mTv;
 
     @Override
