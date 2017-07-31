@@ -2,12 +2,12 @@ package com.mtx.androidcommonutil.ui;
 
 import com.mtx.androidcommonutil.R;
 
+import android.app.Dialog;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
 
 public class TestActivity extends BaseActivity {
     private static final String TAG = "TestActivity";
-    private TextView mTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,13 @@ public class TestActivity extends BaseActivity {
     }
 
     private void initView() {
-        mTv = (TextView) findViewById(R.id.tv);
+    }
+
+    public void showDialog(View view) {
+        Dialog dialog = new Dialog(TestActivity.this);
+
+        dialog.show();
+
     }
 
 }

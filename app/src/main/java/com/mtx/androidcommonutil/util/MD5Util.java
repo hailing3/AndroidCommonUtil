@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密工具类
  * 加密后的内容都很复杂，但是随着原被加密内容的增长，加密后字符串急剧增长
- * TODO 加解密貌似失败？解不出之前的信息
+ * 单向加密算法：包含MD5和SHA,就是只能加密不能解密
  * Created by lishaoming on 16/2/27.
  */
 public class MD5Util {
@@ -17,9 +17,6 @@ public class MD5Util {
 
     /**
      * 加密
-     *
-     * @param plainText
-     * @return
      */
     public static String RSAEncrypt(String plainText) {
         try {
@@ -31,9 +28,6 @@ public class MD5Util {
 
     /**
      * 解密
-     *
-     * @param cryptText
-     * @return
      */
     public static String RSADecrypt(String cryptText) {
         try {
