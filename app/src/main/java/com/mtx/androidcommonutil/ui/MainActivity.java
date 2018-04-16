@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, CanvasActivity.class));
+        startActivity(new Intent(MainActivity.this, WebViewActivity.class));
     }
 
     private void initView() {
@@ -48,6 +48,10 @@ public class MainActivity extends BaseActivity {
 
     public void goTestActivity(View view) {
         startActivity(new Intent(MainActivity.this, TestActivity.class));
+    }
+
+    public void goWebViewActivity(View view) {
+        startActivity(new Intent(MainActivity.this, WebViewActivity.class));
     }
 
 }

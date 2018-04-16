@@ -28,4 +28,8 @@ public class LogUtil {
         return DEBUG ? Log.e(TAG, string) : -1;
     }
 
+    public static int e(String TAG, String string, Exception e) {
+        return DEBUG ? Log.e(TAG, string, e) : -1;
+    }
+
 }

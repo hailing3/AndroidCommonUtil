@@ -5,6 +5,9 @@
 
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <!-- 摄像头权限 -->
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
@@ -17,6 +20,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
+
 
     <application
             android:name=".MyApplication"
@@ -41,12 +45,11 @@
         <activity
                 android:name=".ui.TestActivity"
                 android:label="@string/activity_test"/>
-        <activity android:name=".ui.TextViewActivity">
-        </activity>
-        <activity android:name=".ui.FragmentActivity">
-        </activity>
-        <activity android:name=".ui.CanvasActivity">
-        </activity>
+        <activity android:name=".ui.TextViewActivity"/>
+        <activity android:name=".ui.FragmentActivity"/>
+        <activity android:name=".ui.CanvasActivity"/>
+        <activity android:name=".ui.WebViewActivity"/>
+        <activity android:name=".ui.AnimationActivity"/>
         <activity
                 android:name=".ui.DialogActivity"
                 android:theme="@style/Transparent">

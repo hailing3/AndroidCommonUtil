@@ -41,6 +41,17 @@
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="goAnimationActivity"
+                android:text="@string/activity_animation"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goWebViewActivity"
+                android:text="@string/activity_webview"/>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:onClick="goTestActivity"
                 android:text="TEST"/>

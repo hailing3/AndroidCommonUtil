@@ -9,6 +9,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
 
 /**
  * 测试fragment的界面
@@ -25,7 +26,7 @@ public class FragmentActivity extends BaseActivity {
         bundle.putString(KEY_DATA, "1111111111");
         replaceFragment(new FragmentA(), bundle);
 
-        mHandler.sendEmptyMessageDelayed(0, 2000);
+//        mHandler.sendEmptyMessageDelayed(0, 2000);
     }
 
     private void replaceFragment(Fragment fragment, Bundle bundle) {
@@ -51,4 +52,5 @@ public class FragmentActivity extends BaseActivity {
         super.onPause();
         mHandler.removeCallbacksAndMessages(null);
     }
+
 }

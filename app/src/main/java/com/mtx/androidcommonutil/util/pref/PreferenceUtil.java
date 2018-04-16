@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * 自定义那个Preference工具类
+ * 自定义Preference工具类
  * 所有键，都定义在Pref文件中
  */
 public class PreferenceUtil {

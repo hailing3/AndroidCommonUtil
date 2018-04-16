@@ -2,19 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#ff0000"
               android:orientation="vertical">
 
     <Button
-            android:text="全屏"
-            android:onClick="onTestButtonClick"
-            android:layout_width="match_parent"
+            android:text="Back"
+            android:onClick="goBack"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-    <ImageView
+    <Button
             android:layout_width="match_parent"
-            android:background="@drawable/shape_mix_bottom"
-            android:layout_height="50dp"/>
+            android:text="Toast"
+            android:onClick="onToastClick"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>
 
