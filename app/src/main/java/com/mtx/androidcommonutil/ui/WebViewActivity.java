@@ -31,8 +31,8 @@ public class WebViewActivity extends BaseActivity {
 
     private void initView() {
         mWebView = (WebView) findViewById(R.id.webview);
-        mWebView.setWebChromeClient(new FavWebChromeClient());
-//        mWebView.setWebViewClient(new FavWebViewClient());
+//        mWebView.setWebChromeClient(new FavWebChromeClient());
+        mWebView.setWebViewClient(new FavWebViewClient());
 
         final WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -49,7 +49,6 @@ public class WebViewActivity extends BaseActivity {
         webSettings.setDomStorageEnabled(true);
         webSettings.setAppCacheEnabled(true);
         webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
-//        webSettings.setDatabaseEnabled(true);
 
         mWebView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -60,24 +59,17 @@ public class WebViewActivity extends BaseActivity {
         });
     }
 
+
     private void loadData() {
-//        mWebView.loadUrl("https://www.duokan.com/www/sdk-h5/?ch=M7L3WD&_dk_no_wx_tip=0&page=book&source_id=16187&source=2");
-        mWebView.loadUrl("https://www.baidu.com/");
-//        mWebView.loadUrl("http://m.amap.com/search/mapview/keywords=安宁庄东路&cur_loc=116.46734,39.99161&src=xiaomi_portal");
-//        mWebView.loadUrl("http://m.ctrip.com/webapp/train/home/checilist?trainnumber=Z38&allianceid=4901&sid=976016&Sourceid=2620&Sepopup=19&popup=close&hiderecommapp=1&autoawaken=close?source=miuibrowser");
-    }
+        // 有问题
+        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data centers and smartphones will be the mostdamaging information and communications technologies to the environment by 2040, according to new research from Canadian reseacher Lotfi Belkhir.");
+//        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data%C2%A0centers%C2%A0and%C2%A0smartphones%C2%A0will%C2%A0be%C2%A0the%C2%A0mostdamaging%C2%A0information%C2%A0and%C2%A0communications%C2%A0technologies%C2%A0to%C2%A0the%C2%A0environment%C2%A0by%C2%A02040%2C%C2%A0according%C2%A0to%C2%A0new%C2%A0research%C2%A0from%C2%A0Canadian%C2%A0reseacher%C2%A0Lotfi%C2%A0Belkhir");
 
-    private class FavWebChromeClient extends WebChromeClient {
-        @Override
-        public void onProgressChanged(WebView view, int newProgress) {
-            super.onProgressChanged(view, newProgress);
-        }
+        // 正常
+//        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data centers and smartphones will be the mostdamaging information and communications technologies to the environment by 2040, according to new research from Canadian reseacher Lotfi Belkhir.");
+//        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data+centers+and+smartphones+will+be+the+mostdamaging+information+and+communications+technologies+to+the+environment+by+2040%2C+according+to+new+research+from+Canadian+reseacher+Lotfi+Belkhir");
 
-        @Override
-        public void onPermissionRequest(PermissionRequest request) {
-//            super.onPermissionRequest(request);
-            request.grant(request.getResources());
-        }
+
     }
 
     private class FavWebViewClient extends WebViewClient {
@@ -114,18 +106,6 @@ public class WebViewActivity extends BaseActivity {
             LogUtil.i(TAG, "onReceivedError main page");
         }
 
-    }
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        LogUtil.i(TAG, "activity dispatchTouchEvent");
-        return super.dispatchTouchEvent(ev);
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        LogUtil.i(TAG, "activity onTouchEvent");
-        return super.onTouchEvent(event);
     }
 }
 

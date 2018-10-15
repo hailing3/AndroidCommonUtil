@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, WebViewActivity.class));
+        startActivity(new Intent(MainActivity.this, TestActivity.class));
     }
 
     private void initView() {
