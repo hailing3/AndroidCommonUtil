@@ -25,25 +25,14 @@ public class DragFrameLayout extends FrameLayout {
     public static final int TOUCH_THRESHOLD = 5;
 
     public int margin_edge;
-
     private Scroller scroller;
-
     private float downX, downY;
-
     private float lastX, lastY;
-
     private float curX, curY;
-
     private int lastOffset;
-
     private int width, height; // 屏幕尺寸
-
-    private int viewHeight;
-
-    private int viewWidth;
-
+    private int viewHeight, viewWidth;
     private int statusBarHeight;
-
     private Callback callback;
 
     public DragFrameLayout(@NonNull Context context) {
@@ -75,7 +64,6 @@ public class DragFrameLayout extends FrameLayout {
         // 还需要减去actionBar的高度
         margin_edge = 10;
     }
-
 
     private void resolveAttr(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.DragFrameLayout);
@@ -174,7 +162,7 @@ public class DragFrameLayout extends FrameLayout {
         }
         int dy;
         if (getTop() > (height - getBottom())) { // 靠下半部分
-            dy = height - getBottom() - margin_edge - getStatusBarHeight();
+            dy = height - getBottom() - margin_edge - getStatusBarHeight() - getHeight() / 2;
         } else {
             dy = margin_edge - getTop();
         }
