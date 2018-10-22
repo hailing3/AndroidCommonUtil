@@ -19,7 +19,8 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, TestActivity.class));
+//        startActivity(new Intent(MainActivity.this, TestActivity.class));
+        startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
     }
 
     private void initView() {
@@ -52,6 +53,10 @@ public class MainActivity extends BaseActivity {
 
     public void goWebViewActivity(View view) {
         startActivity(new Intent(MainActivity.this, WebViewActivity.class));
+    }
+
+    public void goRecyclerViewActivity(View view) {
+        startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
     }
 
 }

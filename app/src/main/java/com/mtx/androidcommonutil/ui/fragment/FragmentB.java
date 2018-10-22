@@ -23,6 +23,6 @@ public class FragmentB extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        mTv.setText(getArguments().getString("data"));
+//        mTv.setText(getArguments().getString("data"));
     }
 }
