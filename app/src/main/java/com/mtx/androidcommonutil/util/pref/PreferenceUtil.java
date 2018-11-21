@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 /**
  * 自定义Preference工具类
  * 所有键，都定义在Pref文件中
+ * 目前微信开源高性能键值存储工具MMKV
  */
 public class PreferenceUtil {
     private PreferenceUtil() {

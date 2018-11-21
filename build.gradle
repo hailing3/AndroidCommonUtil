@@ -13,6 +13,9 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven {
+            url 'http://artifactory.d.xiaomi.net/artifactory/artifactory-snapshots/'
+        }
     }
 }
 
