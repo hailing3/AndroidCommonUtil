@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui.widget;
+package com.mtx.androidcommonutil.ui.view;
 
 import com.mtx.androidcommonutil.R;
 import com.mtx.androidcommonutil.util.LogUtil;

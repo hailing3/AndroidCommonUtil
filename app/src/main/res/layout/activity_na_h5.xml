@@ -10,8 +10,8 @@
         android:id="@+id/btn"
         android:text="调用js方法" />
 
-    <com.mtx.androidcommonutil.ui.widget.CommonWebView
+    <com.mtx.androidcommonutil.ui.view.CommonWebView
         android:layout_width="match_parent"
         android:id="@+id/webView"
-        android:layout_height="match_parent"></com.mtx.androidcommonutil.ui.widget.CommonWebView>
+        android:layout_height="match_parent"></com.mtx.androidcommonutil.ui.view.CommonWebView>
 </LinearLayout>

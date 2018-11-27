@@ -21,7 +21,7 @@ public class MyApplication extends Application {
     private void init() {
         mContext = getApplicationContext();
         ZXingLibrary.initDisplayOpinion(this);
-        MiStatUtil.init(this);
+//        MiStatUtil.init(this);
     }
 
     public static Context getContext() {

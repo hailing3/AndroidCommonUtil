@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui.widget;
+package com.mtx.androidcommonutil.ui.view;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

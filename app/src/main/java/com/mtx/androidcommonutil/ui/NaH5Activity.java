@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.mtx.androidcommonutil.R;
-import com.mtx.androidcommonutil.ui.widget.CommonWebView;
+import com.mtx.androidcommonutil.ui.view.CommonWebView;
 
 /**
  * Created by lishaoming on 16/10/30.

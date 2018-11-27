@@ -1,23 +1,20 @@
 package com.mtx.androidcommonutil.ui;
 
 import com.mtx.androidcommonutil.R;
-import com.mtx.androidcommonutil.util.MiStatUtil;
+import com.mtx.androidcommonutil.util.ColorUtil;
+import com.mtx.androidcommonutil.util.DrawableUtil;
+import com.mtx.androidcommonutil.util.LogUtil;
 
-import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-
-import java.lang.reflect.Constructor;
-import java.util.HashMap;
+import android.widget.ImageView;
+import android.widget.SeekBar;
 
 public class TestActivity extends BaseActivity {
     private static final String TAG = "TestActivity";
-    private LinearLayout mContainer;
+    ImageView mIv;
+    SeekBar mSeekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,27 +24,35 @@ public class TestActivity extends BaseActivity {
     }
 
     private void initView() {
-        mContainer = (LinearLayout) findViewById(R.id.ll_container);
+        mIv = (ImageView) findViewById(R.id.iv);
+        final Drawable drawable = mIv.getDrawable();
 
-        try {
-            Log.d(TAG, "loadView start");
-            Class clazz = Class.forName("com.miui.newhome.view.gestureview.NewHomeView");
-            Constructor<View> con = clazz.getConstructor(Context.class, AttributeSet.class);
-            View assistHolderView = con.newInstance(getApplicationContext(), null);
-            FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-            mContainer.addView(assistHolderView, lp);
-            Log.d(TAG, "loadView SUCCESS");
-        } catch (Exception e) {
-            Log.e(TAG, "Exception", e);
-        }
+
+        mSeekBar = (SeekBar) findViewById(R.id.seekBar);
+        mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                float percent = (float) progress / 100;
+                String color = ColorUtil.caculateColor("#FF000000", "#FFFFFFFF", percent);
+                LogUtil.i(TAG, "percent = " + percent + ", color = " + color);
+                mIv.setImageDrawable(DrawableUtil.tintDrawable(drawable, Color.parseColor(color)));
+
+
+                Drawable backgroudDraw = mIv.getBackground();
+                backgroudDraw.setAlpha((int) (percent * 255));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mSeekBar.setProgress(0);
     }
-
-    public void btnClick(View view) {
-        HashMap<String, String> params = new HashMap<>();
-        params.put("title", "testTitle");
-        MiStatUtil.recordCountEvent(null, "testKey123", params);
-    }
-
 }
-
-

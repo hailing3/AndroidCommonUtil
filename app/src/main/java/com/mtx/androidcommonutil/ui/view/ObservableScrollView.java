@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui.widget;
+package com.mtx.androidcommonutil.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,7 +8,6 @@ import android.widget.ScrollView;
  * 能够检测上下滑动的ScrollView
  * Created by lishaoming on 16-11-28.
  */
-
 public class ObservableScrollView extends ScrollView {
     public interface OnScrollChangedListener {
         void onScrollChanged(ScrollView who, int l, int t, int oldl, int oldt);

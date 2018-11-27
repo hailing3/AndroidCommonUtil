@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui.widget;
+package com.mtx.androidcommonutil.ui.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,7 +11,6 @@ import android.view.View;
 /**
  * Created by lishaoming on 17-7-31.
  */
-
 public class CustomProgress extends View {
     private Paint mPaint;
 

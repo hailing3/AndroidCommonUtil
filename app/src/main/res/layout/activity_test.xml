@@ -2,20 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="#ff0000"
               android:orientation="vertical">
 
-    <Button
-            android:layout_width="match_parent"
-            android:text="TEST"
-            android:onClick="btnClick"
-            android:gravity="center"
-            android:layout_height="wrap_content"/>
+    <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/test_height"
+            android:src="@drawable/back_black"
+            android:background="@drawable/shape_bg_back"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/test_height"/>
 
-    <LinearLayout
-            android:id="@+id/ll_container"
+    <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent"></LinearLayout>
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>
 

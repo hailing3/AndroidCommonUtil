@@ -5,7 +5,7 @@
               android:gravity="center"
               android:orientation="vertical">
 
-    <com.mtx.androidcommonutil.ui.widget.CustomProgress
+    <com.mtx.androidcommonutil.ui.view.CustomProgress
             android:background="#ff0000"
             android:layout_margin="50dp"
             android:padding="90dp"
