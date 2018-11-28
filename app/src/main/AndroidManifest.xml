@@ -48,6 +48,7 @@
         <activity android:name=".ui.FragmentActivity"/>
         <activity android:name=".ui.CanvasActivity"/>
         <activity android:name=".ui.WebViewActivity"/>
+        <activity android:name=".ui.ViewActivity"/>
         <activity android:name=".ui.RecyclerViewActivity"/>
         <activity android:name=".ui.AnimationActivity"/>
         <activity

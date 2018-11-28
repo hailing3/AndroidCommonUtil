@@ -6,15 +6,15 @@ import com.mtx.androidcommonutil.ui.view.ShadeImageView;
 import android.os.Bundle;
 import android.widget.SeekBar;
 
-public class TestActivity extends BaseActivity {
-    private static final String TAG = "TestActivity";
+public class ViewActivity extends BaseActivity {
+    private static final String TAG = "ViewActivity";
     ShadeImageView mIv;
     SeekBar mSeekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.activity_view);
         initView();
     }
 

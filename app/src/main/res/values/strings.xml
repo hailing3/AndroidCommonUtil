@@ -9,6 +9,7 @@
     <string name="activity_animation">Animation动画研究</string>
     <string name="activity_webview">WebView</string>
     <string name="activity_recyclerview">RecyclerView</string>
+    <string name="activity_view">各种自定义view</string>
     <string name="activity_common_scroll">WebView滚动，上下面板同步滑动</string>
     <string name="activity_test">测试界面</string>
 

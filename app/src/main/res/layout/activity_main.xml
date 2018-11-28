@@ -43,16 +43,23 @@
                 android:layout_height="wrap_content"
                 android:onClick="goAnimationActivity"
                 android:text="@string/activity_animation"/>
+
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="goWebViewActivity"
                 android:text="@string/activity_webview"/>
-   <Button
+
+        <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="goRecyclerViewActivity"
                 android:text="@string/activity_recyclerview"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goViewActivity"
+                android:text="@string/activity_view"/>
 
         <Button
                 android:layout_width="match_parent"
