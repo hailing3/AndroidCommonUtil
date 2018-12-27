@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, TestActivity.class));
+        startActivity(new Intent(MainActivity.this, DialogActivity.class));
     }
 
     private void initView() {
@@ -60,6 +60,10 @@ public class MainActivity extends BaseActivity {
 
     public void goRecyclerViewActivity(View view) {
         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+    }
+
+    public void goKeyboardActivity(View view){
+        startActivity(new Intent(MainActivity.this, KeyboardActivity.class));
     }
 
 }

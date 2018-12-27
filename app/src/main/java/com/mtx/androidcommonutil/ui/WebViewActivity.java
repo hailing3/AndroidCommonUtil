@@ -6,19 +6,21 @@ import com.mtx.androidcommonutil.util.LogUtil;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.webkit.PermissionRequest;
-import android.webkit.WebChromeClient;
+import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.LinearLayout;
 
 /**
  * 测试webview的页面
  */
 public class WebViewActivity extends BaseActivity {
     private static final String TAG = "WebViewActivity";
+    private LinearLayout mContainer;
     private WebView mWebView;
 
     @Override
@@ -30,7 +32,11 @@ public class WebViewActivity extends BaseActivity {
     }
 
     private void initView() {
-        mWebView = (WebView) findViewById(R.id.webview);
+        mContainer = (LinearLayout) findViewById(R.id.container);
+        mWebView = new WebView(this);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        mWebView.setLayoutParams(lp);
+//        mWebView = (WebView) findViewById(R.id.webview);
 //        mWebView.setWebChromeClient(new FavWebChromeClient());
         mWebView.setWebViewClient(new FavWebViewClient());
 
@@ -57,18 +63,32 @@ public class WebViewActivity extends BaseActivity {
                 return false;
             }
         });
+
+//        mContainer.addView(mWebView);
+
+        View view = LayoutInflater.from(WebViewActivity.this).inflate(R.layout.layout_detail_like_test, null);
+        mContainer.addView(view);
+
+        mContainer.addView(mWebView, 0);
+
+
     }
 
 
     private void loadData() {
         // 有问题
-        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data centers and smartphones will be the mostdamaging information and communications technologies to the environment by 2040, according to new research from Canadian reseacher Lotfi Belkhir.");
+//        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data centers and smartphones will be the mostdamaging information and communications technologies to the environment by 2040, according to new research from Canadian reseacher Lotfi Belkhir.");
 //        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data%C2%A0centers%C2%A0and%C2%A0smartphones%C2%A0will%C2%A0be%C2%A0the%C2%A0mostdamaging%C2%A0information%C2%A0and%C2%A0communications%C2%A0technologies%C2%A0to%C2%A0the%C2%A0environment%C2%A0by%C2%A02040%2C%C2%A0according%C2%A0to%C2%A0new%C2%A0research%C2%A0from%C2%A0Canadian%C2%A0reseacher%C2%A0Lotfi%C2%A0Belkhir");
 
         // 正常
 //        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data centers and smartphones will be the mostdamaging information and communications technologies to the environment by 2040, according to new research from Canadian reseacher Lotfi Belkhir.");
 //        mWebView.loadUrl("http://dict.youdao.com/recite/words/#!/dict/engchn?le=eng&chuansongmen=true&q=Data+centers+and+smartphones+will+be+the+mostdamaging+information+and+communications+technologies+to+the+environment+by+2040%2C+according+to+new+research+from+Canadian+reseacher+Lotfi+Belkhir");
 
+        // 加载本地html
+//        mWebView.loadUrl("file:///android_asset/test.html");
+
+//        mWebView.loadUrl("https://mb.yidianzixun.com/article/0KooGEhR?ref=&s=mb");
+        mWebView.loadUrl("https://m.ctrip.com/webapp/you/operations/article/detail/4159139.html?Allianceid=826349&sid=1389655&ouid=yd&popup=close&twojumpwakeup=1&yidian_docid=0KooGEhR&yidian_ref=&yidian_s=mb");
 
     }
 

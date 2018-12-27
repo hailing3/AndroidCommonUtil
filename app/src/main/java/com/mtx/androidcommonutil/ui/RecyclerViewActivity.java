@@ -38,10 +38,6 @@ public class RecyclerViewActivity extends BaseActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         //设置adapter
         mRecyclerView.setAdapter(mAdapter = new HomeRecyclerAdapter());
-////设置Item增加、移除动画
-//        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-////添加分割线
-//        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL_LIST));
     }
 
     protected void initData() {

@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
-    <com.mtx.androidcommonutil.ui.view.ShadeImageView
-            android:id="@+id/iv_test"
-            android:src="@drawable/selector_detail_back"
-            android:background="@drawable/selector_detail_back_bg"
-            android:layout_width="@dimen/test_height"
-            android:layout_height="@dimen/test_height"/>
-
-    <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_marginTop="30dp"
+    <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="250dp">
 
-</LinearLayout>
+        <android.support.design.widget.CollapsingToolbarLayout
+                app:layout_scrollFlags="scroll"
+                app:contentScrim="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
 
+            <TextView
+                    android:text="banner区域"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:background="#987545"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="悬浮的部分"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:paddingTop="500dp"
+                android:paddingBottom="500dp"
+                android:layout_height="wrap_content"
+                android:text="test1111"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

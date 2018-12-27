@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/dialog_container"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:minWidth="10000dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+        <com.mtx.androidcommonutil.ui.view.KeyBackEditText
+                android:id="@+id/edit_detail_bottom_pop"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:hint="写点什么..."
+                android:minHeight="@dimen/dp_29.33"
+                android:layout_gravity="center_vertical"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:maxLines="3"
+                android:textSize="@dimen/sp_13"
+                android:background="@drawable/shape_detail_bottom_text"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_80"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_detail_bottom_pop"
+                android:text="发送"
+                android:textSize="@dimen/sp_15"
+                android:enabled="false"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_18"
+                android:textColor="@drawable/selector_detail_bottom_send"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

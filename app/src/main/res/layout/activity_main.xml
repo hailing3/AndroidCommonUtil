@@ -47,6 +47,12 @@
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="goKeyboardActivity"
+                android:text="@string/activity_keyboard"/>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:onClick="goWebViewActivity"
                 android:text="@string/activity_webview"/>
 

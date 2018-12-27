@@ -7,6 +7,7 @@
     <string name="activity_fragment">Fragment测试</string>
     <string name="activity_dialog">Dialog Activity样式</string>
     <string name="activity_animation">Animation动画研究</string>
+    <string name="activity_keyboard">Keyboard软键盘</string>
     <string name="activity_webview">WebView</string>
     <string name="activity_recyclerview">RecyclerView</string>
     <string name="activity_view">各种自定义view</string>
@@ -22,4 +23,5 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">取消</string>
 </resources>
