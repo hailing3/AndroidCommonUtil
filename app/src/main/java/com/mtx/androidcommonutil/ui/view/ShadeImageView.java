@@ -1,10 +1,6 @@
 package com.mtx.androidcommonutil.ui.view;
 
-import com.mtx.androidcommonutil.util.ColorUtil;
-import com.mtx.androidcommonutil.util.DrawableUtil;
-
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -52,11 +48,24 @@ public class ShadeImageView extends ImageView {
     public float getPercent() {
         return percent;
     }
-
+    
+    /**
+     * alpha 0-1
+     * src白 -> background黑
+     *
+     * @param percent
+     */
     public void setPercent(float percent) {
         this.percent = percent;
-        String color = ColorUtil.caculateColor(startColor, endColor, percent);
-        setImageDrawable(DrawableUtil.tintDrawable(mDrawableCache, Color.parseColor(color)));
+        // 对src设置在特定范围内上色
+//        String color = ColorUtil.caculateColor(startColor, endColor, percent);
+//        setImageDrawable(DrawableUtil.tintDrawable(mDrawableCache, Color.parseColor(color)));
+//        getBackground().setAlpha((int) (percent * 255));
+
+        // background和src分别从0-1alpha变化
+        Drawable drawable = getDrawable();
+        drawable.setAlpha((int) ((1 - percent) * 255));
+        setImageDrawable(drawable);
         getBackground().setAlpha((int) (percent * 255));
     }
 }

@@ -88,8 +88,9 @@ public class WebViewActivity extends BaseActivity {
 //        mWebView.loadUrl("file:///android_asset/test.html");
 
 //        mWebView.loadUrl("https://mb.yidianzixun.com/article/0KooGEhR?ref=&s=mb");
-        mWebView.loadUrl("https://m.ctrip.com/webapp/you/operations/article/detail/4159139.html?Allianceid=826349&sid=1389655&ouid=yd&popup=close&twojumpwakeup=1&yidian_docid=0KooGEhR&yidian_ref=&yidian_s=mb");
+//        mWebView.loadUrl("https://m.ctrip.com/webapp/you/operations/article/detail/4159139.html?Allianceid=826349&sid=1389655&ouid=yd&popup=close&twojumpwakeup=1&yidian_docid=0KooGEhR&yidian_ref=&yidian_s=mb");
 
+        mWebView.loadUrl("http://doris.yidianzixun.com/article/0LB0vu05?appid=s3rd_op647");
     }
 
     private class FavWebViewClient extends WebViewClient {

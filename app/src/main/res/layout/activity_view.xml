@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@drawable/ic_titlebar_back_n" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@drawable/ic_titlebar_back_white_n" />
 
     <com.mtx.androidcommonutil.ui.view.ShadeImageView
-            android:id="@+id/iv_test"
-            android:src="@drawable/selector_detail_back"
-            android:background="@drawable/selector_detail_back_bg"
-            android:layout_width="@dimen/test_height"
-            android:layout_height="@dimen/test_height"/>
+        android:id="@+id/iv_test"
+        android:layout_width="@dimen/test_height"
+        android:layout_height="@dimen/test_height"
+        android:background="@drawable/ic_titlebar_back_n"
+        android:src="@drawable/ic_titlebar_back_white_n" />
+
+    <!--android:src="@drawable/selector_detail_back"-->
+    <!--android:background="@drawable/selector_detail_back_bg"-->
 
     <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" />
 
 </LinearLayout>
 

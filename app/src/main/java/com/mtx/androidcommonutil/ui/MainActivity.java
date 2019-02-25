@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, DialogActivity.class));
+        startActivity(new Intent(MainActivity.this, ViewActivity.class));
     }
 
     private void initView() {
