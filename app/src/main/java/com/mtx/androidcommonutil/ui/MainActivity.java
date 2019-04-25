@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, WbActivity.class));
+        startActivity(new Intent(MainActivity.this, ViewActivity.class));
     }
 
     private void initView() {
@@ -72,6 +72,10 @@ public class MainActivity extends BaseActivity {
 
     public void goWBActivity(View view) {
         startActivity(new Intent(MainActivity.this, WbActivity.class));
+    }
+
+    public void goSVGActivity(View view) {
+        startActivity(new Intent(MainActivity.this, SVGActivity.class));
     }
 
 }

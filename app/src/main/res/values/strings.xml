@@ -10,11 +10,12 @@
     <string name="activity_keyboard">Keyboard软键盘</string>
     <string name="activity_webview">WebView</string>
     <string name="activity_recyclerview">RecyclerView</string>
-    <string name="activity_view">各种自定义view</string>
+    <string name="activity_view">高级UI</string>
     <string name="activity_wx">微信分享</string>
     <string name="activity_wb">微博分享</string>
     <string name="activity_common_scroll">WebView滚动，上下面板同步滑动</string>
     <string name="activity_test">测试界面</string>
+    <string name="activity_svg">SVG界面</string>
 
     <!--appLayout-->
     <string name="bye_burger_float_behavior">com.mtx.androidcommonutil.ui.widget.applayout.behavior.ByeBurgerFloatButtonBehavior</string>

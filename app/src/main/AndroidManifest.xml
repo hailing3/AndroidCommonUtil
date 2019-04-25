@@ -55,6 +55,7 @@
         <activity android:name=".ui.DialogActivity"/>
         <activity android:name=".ui.WxActivity"/>
         <activity android:name=".ui.WbActivity"/>
+        <activity android:name=".ui.SVGActivity"/>
     </application>
 
 </manifest>
