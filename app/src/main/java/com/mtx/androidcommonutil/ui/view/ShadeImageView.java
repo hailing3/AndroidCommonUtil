@@ -48,7 +48,7 @@ public class ShadeImageView extends ImageView {
     public float getPercent() {
         return percent;
     }
-    
+
     /**
      * alpha 0-1
      * src白 -> background黑

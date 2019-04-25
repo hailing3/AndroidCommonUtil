@@ -65,4 +65,9 @@
         <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
     </style>
 
+    <style name="main_menu_animStyle">
+        <item name="android:windowEnterAnimation">@anim/dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_anim</item>
+    </style>
+
 </resources>

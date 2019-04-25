@@ -67,6 +67,20 @@
                 android:onClick="goViewActivity"
                 android:text="@string/activity_view"/>
 
+          <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goWXActivity"
+                android:text="@string/activity_wx"/>
+
+          <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goWBActivity"
+                android:text="@string/activity_wb"/>
+
+
+
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

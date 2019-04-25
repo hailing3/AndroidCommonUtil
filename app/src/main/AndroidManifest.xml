@@ -53,6 +53,8 @@
         <activity android:name=".ui.RecyclerViewActivity"/>
         <activity android:name=".ui.AnimationActivity"/>
         <activity android:name=".ui.DialogActivity"/>
+        <activity android:name=".ui.WxActivity"/>
+        <activity android:name=".ui.WbActivity"/>
     </application>
 
 </manifest>

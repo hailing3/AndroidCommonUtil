@@ -1,10 +1,10 @@
 package com.mtx.androidcommonutil.ui;
 
-import com.mtx.androidcommonutil.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.mtx.androidcommonutil.R;
 
 /**
  * 主页面
@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, ViewActivity.class));
+        startActivity(new Intent(MainActivity.this, WbActivity.class));
     }
 
     private void initView() {
@@ -62,8 +62,16 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
     }
 
-    public void goKeyboardActivity(View view){
+    public void goKeyboardActivity(View view) {
         startActivity(new Intent(MainActivity.this, KeyboardActivity.class));
+    }
+
+    public void goWXActivity(View view) {
+        startActivity(new Intent(MainActivity.this, WxActivity.class));
+    }
+
+    public void goWBActivity(View view) {
+        startActivity(new Intent(MainActivity.this, WbActivity.class));
     }
 
 }

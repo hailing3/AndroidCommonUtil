@@ -1,15 +1,18 @@
 package com.mtx.androidcommonutil.ui;
 
+import android.os.Bundle;
+import android.text.Html;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
 import com.mtx.androidcommonutil.R;
 import com.mtx.androidcommonutil.ui.view.ShadeImageView;
-
-import android.os.Bundle;
-import android.widget.SeekBar;
 
 public class ViewActivity extends BaseActivity {
     private static final String TAG = "ViewActivity";
     ShadeImageView mIv;
     SeekBar mSeekBar;
+    TextView mTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,5 +44,7 @@ public class ViewActivity extends BaseActivity {
         });
 
         mSeekBar.setProgress(0);
+
+        mTv = (TextView) findViewById(R.id.tv);
     }
 }
