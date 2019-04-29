@@ -16,6 +16,7 @@
     <string name="activity_common_scroll">WebView滚动，上下面板同步滑动</string>
     <string name="activity_test">测试界面</string>
     <string name="activity_svg">SVG界面</string>
+    <string name="activity_live_data_bus">组件通信框架——LiveDataBus</string>
 
     <!--appLayout-->
     <string name="bye_burger_float_behavior">com.mtx.androidcommonutil.ui.widget.applayout.behavior.ByeBurgerFloatButtonBehavior</string>

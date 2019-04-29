@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui;
+package com.mtx.androidcommonutil.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, ViewActivity.class));
+        startActivity(new Intent(MainActivity.this, LiveDataBusActivity.class));
     }
 
     private void initView() {
@@ -76,6 +76,10 @@ public class MainActivity extends BaseActivity {
 
     public void goSVGActivity(View view) {
         startActivity(new Intent(MainActivity.this, SVGActivity.class));
+    }
+
+    public void goLiveDataBusActivity(View view) {
+        startActivity(new Intent(MainActivity.this, LiveDataBusActivity.class));
     }
 
 }

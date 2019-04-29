@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui;
+package com.mtx.androidcommonutil.ui.activity;
 
 import android.app.Activity;
 import android.app.Dialog;

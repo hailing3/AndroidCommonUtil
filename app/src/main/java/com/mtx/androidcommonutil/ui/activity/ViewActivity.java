@@ -1,7 +1,6 @@
-package com.mtx.androidcommonutil.ui;
+package com.mtx.androidcommonutil.ui.activity;
 
 import android.os.Bundle;
-import android.text.Html;
 import android.widget.SeekBar;
 import android.widget.TextView;
 

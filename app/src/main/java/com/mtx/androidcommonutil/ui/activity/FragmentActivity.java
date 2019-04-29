@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui;
+package com.mtx.androidcommonutil.ui.activity;
 
 import com.mtx.androidcommonutil.R;
 import com.mtx.androidcommonutil.ui.adapter.ViewPagerAdapter;
@@ -6,8 +6,6 @@ import com.mtx.androidcommonutil.ui.fragment.FragmentA;
 import com.mtx.androidcommonutil.ui.fragment.FragmentB;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;

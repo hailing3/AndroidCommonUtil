@@ -1,4 +1,4 @@
-package com.mtx.androidcommonutil.ui;
+package com.mtx.androidcommonutil.ui.activity;
 
 import android.graphics.drawable.Animatable;
 import android.os.Bundle;

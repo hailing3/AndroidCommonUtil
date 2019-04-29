@@ -28,7 +28,7 @@
             android:label="@string/activity_main"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -36,26 +36,27 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ui.NaH5Activity"
+                android:name=".ui.activity.NaH5Activity"
                 android:label="@string/activity_na_h5"/>
         <activity
-                android:name=".ui.CodeActivity"
+                android:name=".ui.activity.CodeActivity"
                 android:label="@string/activity_code"/>
         <activity
-                android:name=".ui.TestActivity"
+                android:name=".ui.activity.TestActivity"
                 android:label="@string/activity_test"/>
-        <activity android:name=".ui.TextViewActivity"/>
-        <activity android:name=".ui.FragmentActivity"/>
-        <activity android:name=".ui.CanvasActivity"/>
-        <activity android:name=".ui.WebViewActivity"/>
-        <activity android:name=".ui.KeyboardActivity"/>
-        <activity android:name=".ui.ViewActivity"/>
-        <activity android:name=".ui.RecyclerViewActivity"/>
-        <activity android:name=".ui.AnimationActivity"/>
-        <activity android:name=".ui.DialogActivity"/>
-        <activity android:name=".ui.WxActivity"/>
-        <activity android:name=".ui.WbActivity"/>
-        <activity android:name=".ui.SVGActivity"/>
+        <activity android:name=".ui.activity.TextViewActivity"/>
+        <activity android:name=".ui.activity.FragmentActivity"/>
+        <activity android:name=".ui.activity.CanvasActivity"/>
+        <activity android:name=".ui.activity.WebViewActivity"/>
+        <activity android:name=".ui.activity.KeyboardActivity"/>
+        <activity android:name=".ui.activity.ViewActivity"/>
+        <activity android:name=".ui.activity.RecyclerViewActivity"/>
+        <activity android:name=".ui.activity.AnimationActivity"/>
+        <activity android:name=".ui.activity.DialogActivity"/>
+        <activity android:name=".ui.activity.WxActivity"/>
+        <activity android:name=".ui.activity.WbActivity"/>
+        <activity android:name=".ui.activity.SVGActivity"/>
+        <activity android:name=".ui.activity.LiveDataBusActivity"/>
     </application>
 
 </manifest>

@@ -1,11 +1,8 @@
-package com.mtx.androidcommonutil.ui;
+package com.mtx.androidcommonutil.ui.activity;
 
 import com.mtx.androidcommonutil.R;
-import com.mtx.androidcommonutil.util.ToastUtil;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 public class AnimationActivity extends BaseActivity {
     private static final String TAG = "AnimationActivity";

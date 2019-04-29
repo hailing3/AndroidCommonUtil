@@ -1,8 +1,7 @@
 package com.mtx.androidcommonutil.ui.fragment;
 
 import com.mtx.androidcommonutil.R;
-import com.mtx.androidcommonutil.ui.FragmentActivity;
-import com.mtx.androidcommonutil.ui.TestActivity;
+import com.mtx.androidcommonutil.ui.activity.TestActivity;
 import com.mtx.androidcommonutil.util.LogUtil;
 
 import android.app.Fragment;
