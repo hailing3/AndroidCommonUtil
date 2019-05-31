@@ -21,12 +21,6 @@
             android:text="@string/activity_view"/>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="goLiveDataBusActivity"
-            android:text="@string/activity_live_data_bus"/>
-
-        <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="goNaH5Activity"

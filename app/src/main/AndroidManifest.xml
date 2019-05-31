@@ -56,7 +56,6 @@
         <activity android:name=".ui.activity.WxActivity"/>
         <activity android:name=".ui.activity.WbActivity"/>
         <activity android:name=".ui.activity.SVGActivity"/>
-        <activity android:name=".ui.activity.LiveDataBusActivity"/>
     </application>
 
 </manifest>

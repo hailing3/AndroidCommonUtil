@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.mtx.androidcommonutil.R;
+import com.mtx.androidcommonutil.model.PersonModel;
+import com.mtx.androidcommonutil.util.LogUtil;
 
 /**
  * 主页面
  * Created by lishaoming on 16/10/30.
  */
 public class MainActivity extends BaseActivity {
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +22,12 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
-        startActivity(new Intent(MainActivity.this, LiveDataBusActivity.class));
+        PersonModel model = new PersonModel("Tom", "123", true, 20);
+        LogUtil.i(TAG, "model= " + model);
+
+        Intent intent =new Intent(MainActivity.this, TestActivity.class);
+        intent.putExtra("key", model);
+        startActivity(intent);
     }
 
     private void initView() {
@@ -76,10 +84,6 @@ public class MainActivity extends BaseActivity {
 
     public void goSVGActivity(View view) {
         startActivity(new Intent(MainActivity.this, SVGActivity.class));
-    }
-
-    public void goLiveDataBusActivity(View view) {
-        startActivity(new Intent(MainActivity.this, LiveDataBusActivity.class));
     }
 
 }

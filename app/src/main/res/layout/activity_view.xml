@@ -39,6 +39,8 @@
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
         android:text="TEXT"
         android:textSize="16sp" />
 
@@ -50,6 +52,7 @@
         android:text="fawejfioajewfiofjaweiofj房间爱我；偶尔放假哦啊文件覅金娃二分法无回复哈维UI偶家佛奥结尾"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
+
 
 
 </LinearLayout>
