@@ -132,5 +132,6 @@
     <dimen name="sp_15.27">15.27sp</dimen>
     <dimen name="sp_24">24sp</dimen>
     <dimen name="sp_28.36">28.36sp</dimen>
+    <dimen name="sp_40">40sp</dimen>
 
 </resources>

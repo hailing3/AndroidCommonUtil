@@ -2,11 +2,12 @@ package com.mtx.androidcommonutil.ui.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Layout;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextPaint;
-import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -16,6 +17,9 @@ import com.mtx.androidcommonutil.ui.view.ShadeImageView;
 import com.mtx.androidcommonutil.util.LogUtil;
 import com.mtx.androidcommonutil.util.ToastUtil;
 
+/**
+ * 自定义view的界面
+ */
 public class ViewActivity extends BaseActivity {
     private static final String TAG = "ViewActivity";
     ShadeImageView mIv;
@@ -79,8 +83,11 @@ public class ViewActivity extends BaseActivity {
                 sb.append(c);
             }
         }
-
-        mTv.setMovementMethod(LinkMovementMethod.getInstance());
+        mTv.setHighlightColor(getResources().getColor(android.R.color.transparent)); // 解决点击后有背景色的问题 参考https://blog.csdn.net/ch_kexin/article/details/84811242
+        // 方法1：解决textview里面点击和父view点击冲突的问题，取代下面方法  https://www.jianshu.com/p/413184996fc8
+        mTv.setOnTouchListener(ClickMovementMethod.getInstance());
+        // 方法2：传统的textview内部点击方法
+//        mTv.setMovementMethod(LinkMovementMethod.getInstance());
         mTv.setText(builder);
 
     }
@@ -129,5 +136,47 @@ public class ViewActivity extends BaseActivity {
         return false;
     }
 
+
+    /**
+     * 解决LinkMovementMethod点击事件无法生效的问题，处理事件分发
+     */
+    public static class ClickMovementMethod implements View.OnTouchListener {
+        private static ClickMovementMethod sInstance;
+
+        public static ClickMovementMethod getInstance() {
+            if (sInstance == null) {
+                sInstance = new ClickMovementMethod();
+            }
+            return sInstance;
+        }
+
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            boolean ret = false;
+            TextView widget = (TextView) v;
+            CharSequence text = widget.getText();
+            Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+            int action = event.getAction();
+            if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_DOWN) {
+                int x = (int) event.getX();
+                int y = (int) event.getY();
+                x -= widget.getTotalPaddingLeft();
+                y -= widget.getTotalPaddingTop();
+                x += widget.getScrollX();
+                y += widget.getScrollY();
+                Layout layout = widget.getLayout();
+                int line = layout.getLineForVertical(y);
+                int off = layout.getOffsetForHorizontal(line, x);
+                ClickableSpan[] link = spannable.getSpans(off, off, ClickableSpan.class);
+                if (link.length != 0) {
+                    if (action == MotionEvent.ACTION_UP) {
+                        link[0].onClick(widget);
+                    }
+                    ret = true;
+                }
+            }
+            return ret;
+        }
+    }
 
 }

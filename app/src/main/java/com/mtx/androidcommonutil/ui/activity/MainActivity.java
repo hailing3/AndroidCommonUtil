@@ -21,13 +21,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         initView();
-
-        PersonModel model = new PersonModel("Tom", "123", true, 20);
-        LogUtil.i(TAG, "model= " + model);
-
-        Intent intent =new Intent(MainActivity.this, TestActivity.class);
-        intent.putExtra("key", model);
-        startActivity(intent);
+        startActivity(new Intent(this, ViewActivity.class));
     }
 
     private void initView() {

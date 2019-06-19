@@ -3,4 +3,12 @@
     <declare-styleable name="DragFrameLayout">
         <attr name="margin_edge" format="dimension"></attr>
     </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="CustomText" format="string"></attr>
+        <attr name="CustomTextColor" format="color"></attr>
+        <attr name="CustomBgColor" format="color"></attr>
+        <attr name="CustomTextSize" format="dimension"></attr>
+    </declare-styleable>
+
 </resources>
