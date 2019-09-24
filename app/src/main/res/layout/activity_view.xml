@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:text="我是跑马灯1，我是跑马灯2，我是跑马3，我是跑马4，我是跑马灯5,我是跑马灯6,我是跑马灯7..."
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:id="@+id/marquee_tv"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_height="wrap_content" />
+
     <com.mtx.androidcommonutil.ui.view.CustomTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

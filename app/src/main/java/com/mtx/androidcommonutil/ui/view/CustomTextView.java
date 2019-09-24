@@ -87,7 +87,7 @@ public class CustomTextView extends TextView {
         canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
 
         mPaint.setColor(mBgColor);
-        canvas.drawText(mText, getWidth() / 2 - mRect.width() / 2, getHeight() / 2 + mRect.height() / 2, mPaint);
+         canvas.drawText(mText, getWidth() / 2 - mRect.width() / 2, getHeight() / 2 + mRect.height() / 2, mPaint);
     }
 
     private String randomText() {

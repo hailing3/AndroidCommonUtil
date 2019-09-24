@@ -24,7 +24,7 @@ public class ViewActivity extends BaseActivity {
     private static final String TAG = "ViewActivity";
     ShadeImageView mIv;
     SeekBar mSeekBar;
-    TextView mTv;
+    TextView mTv, mTvMarquee;
 
     final String content = "456//@咖啡瘾少女1：111//@咖啡瘾少女2：123//@咖啡瘾少女3：再次转发//@我爱咖啡瘾少女2：123//@我不爱咖啡瘾少女2：123";
 
@@ -37,6 +37,8 @@ public class ViewActivity extends BaseActivity {
 
     private void initView() {
         mIv = (ShadeImageView) findViewById(R.id.iv_test);
+        mTvMarquee = (TextView) findViewById(R.id.marquee_tv);
+        mTvMarquee.setSelected(true);
 
         mSeekBar = (SeekBar) findViewById(R.id.seekBar);
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
